@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "global";
+
+// Plugins ***********
+@import "plugins/owl/owl.carousel";
+@import "plugins/owl/owl.theme.default";
+
+// Pages*********
+@import "pages/homepage/homepage";
+
+// nav parts *****
+@import "parts/navigation";

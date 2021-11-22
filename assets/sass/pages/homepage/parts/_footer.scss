@@ -1,0 +1,204 @@
+.footer {
+    background-color: $footerBgColor;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        padding: 100px 0;
+        flex-wrap: wrap;
+
+
+        .footer-box {
+            width: 25%;
+            text-align: center left;
+            border-right: 1px solid #eeeeee;
+            padding: 25px;
+
+            @media(max-width: 900px) {
+                width: 50%;
+            }
+
+            @media(max-width: 750px) {
+                width: 100%;
+                text-align: center;
+            }
+
+            img {
+                margin: 0 0 20px 0;
+            }
+
+            &:last-of-type {
+                border-right: none;
+            }
+
+            h5 {
+                text-transform: uppercase;
+                margin: 0 0 20px 0;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 1.5;
+                margin: 0 0 20px 0;
+
+                a {
+                    color: $footerFontLiAColor;
+                    border-bottom: 1px solid $footerFontLiAColor;
+                    transition: 0.5s;
+
+                    &:hover {
+                        color: $footerFontLiAColorHover;
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0 0 20px 0;
+
+                li {
+                    padding: 0;
+                    margin: 5px 0;
+
+                    a {
+                        color: $footerFontLiAColor;
+                        font-size: 12px;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: $footerFontLiAColorHover
+                        }
+                    }
+
+                }
+            }
+
+            .social-media {
+                a {
+                    text-decoration: none;
+                    margin: 0 5px 0 0;
+
+                    @each $name,
+                    $color in $socialMedia {
+                        &.btn-#{$name} {
+                            color: $footerFontLiAColor;
+                            transition: 0.5s;
+                            font-size: 24px;
+
+                            &:hover {
+                                color: $color;
+
+                                i {
+                                    transform: rotate(360deg);
+                                    transition: 1.5s;
+
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+            }
+
+            .container-instagrams-img {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+
+
+                .instagram-image {
+                    width: calc(100% / 3);
+                    padding: 0;
+
+
+
+                    a {
+                        width: 90%;
+                        color: $instagramImageSapIconColor;
+                        position: relative;
+                        display: block;
+                        margin: 0 0 8px 0;
+                        transition: 0.8s;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            display: block;
+                            margin: 0;
+
+                        }
+
+                        span {
+                            width: 100%;
+                            position: absolute;
+                            bottom: -25px;
+                            left: 0;
+                            height: 25px;
+                            transition: .3s;
+
+                            i {
+
+                                top: 50%;
+                                left: 50%;
+                                transform: translateX(-50%) translateY(-50%);
+                                position: absolute;
+                            }
+
+
+                        }
+
+                        &:hover {
+                            span {
+                                bottom: 0;
+                                background-color: $instagramImageSpanColor;
+                            }
+
+                            i {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .second-footer {
+        background-color: $footerSecondBgColor;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            @media(max-width:1200px) {
+                display: flex;
+                justify-content: space-around;
+
+            }
+
+            @media(max-width: 700px) {
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            a {
+                color: $footerSecondAFontColor;
+                transition: 0.5s;
+
+                &:hover {
+                    color: $footerSecondAFontHoverColor
+                }
+            }
+
+            .footer-right-policy::before {
+                content: "| ";
+                color: $footerFontLiAColor;
+            }
+        }
+
+    }
+}

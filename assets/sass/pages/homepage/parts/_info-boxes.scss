@@ -1,0 +1,50 @@
+.info-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .box {
+        border-right: 1px solid $infoBoxesBorderColor;
+        border-bottom: 1px solid $infoBoxesBorderColor;
+        width: 25%;
+        padding: 50px;
+        text-align: center;
+
+        @media(max-width: 1000px) {
+            width: 50%;
+
+            &:nth-of-type(2n) {
+                border-right: none;
+            }
+        }
+
+        @media(max-width: 500px) {
+            width: 100%;
+            border-right: none;
+
+        }
+
+        &:last-of-type {
+            border-right: none;
+        }
+
+        i {
+            font-size: 60px;
+            color: $infoBoxesIconColor;
+            margin: 0 0 30px 0;
+        }
+
+        .title {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $infoBoxesTitleFontColor;
+            margin: 0 0 20px 0;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+// FONTS
+$generalFontFamily: 'Roboto',
+sans-serif;
+$headerFontFamily: 'Montserrat',
+sans-serif;
+$fontColor: #6f6f6f;
+
+// navigation
+$navigationMainColor: #232323;
+$navigationMainColorHover: rgba(0, 0, 0, 0.6);
+$navigationMoveBgColor: #000000;
+$navigationMoveATextColor: white;
+$navigationMoveHoverATextColor: rgba(255, 255, 255, 0.5);
+
+// Hamburger
+$hamburgerBgColor: white;
+
+// menu on click hamburger
+$mobileMenuBgColor: #000000;
+// slider
+$sliderTextColor: #232323;
+$sliderDotBgColor: #232323;
+
+// slider fixed-button
+$sliderFixedButtonABgColor: rgba(61, 63, 53, 0.342);
+$sliderFixedButtonAHoverBgColor: rgba(0, 0, 0, 0.637);
+$sliderFixedButtonAFontColor: #ffffff;
+
+// Services
+$servicesBgColor: #FFFFFF;
+$headerRightSideColor: #232323;
+$boxTitleRightSideColor: #232323;
+
+// Background
+$movieBgColor: #1C1C1C;
+$movieH3Color: #FFFFFF;
+$movieH4Color: #b7B7B7;
+
+// Works
+$headersDefaultH5Color:#939393;
+$headersDefaultH2Color: #232323;
+$worksBgColor: #F7F7F7;
+$imagePhotoBgColorHover: #ff214dc0;
+$imagePhotoIconFontColor: #000000;
+$imagePhotoIconFontColorBorderHover: #FFFFFF;
+$imagePhotoIconFontColorHover: #FFFFFF;
+$imagePhotoIconFontBgHover: transparent;
+$imageDescriptionBgColor: #FFFFFF;
+
+// info-boxes
+$infoBoxesBorderColor: #ededed;
+$infoBoxesTitleFontColor: #232323;
+$infoBoxesIconColor: #ff214F;
+
+
+// ifooter
+
+$footerBgColor: #1C1C1C;
+$footerFontLiAColor: #6f6f6f;
+$footerFontLiAColorHover: #ff214F;
+
+$facebookColor: #3b5999;
+$twitterColor: #55acee;
+$instagramColor: #ff4800;
+$googleColor: #ff214F;
+$instagramImageSpanColor: rgba(35, 35, 35, 0.8);
+$instagramImageSapIconColor: #ffffff;
+$footerSecondBgColor: #141414;
+$footerSecondAFontColor: #626262;
+$footerSecondAFontHoverColor: #ff214F;
+
+// footer social media colors:
+$socialMedia : ('facebook': $facebookColor,
+    'twitter' : $twitterColor,
+    'google' : $googleColor,
+    'instagram' : $twitterColor);

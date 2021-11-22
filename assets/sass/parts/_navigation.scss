@@ -1,0 +1,279 @@
+.menu-open {
+    overflow: hidden;
+
+    .navigation {
+        .container {
+            .menu {
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                background-color: $mobileMenuBgColor;
+
+
+                li {
+                    text-transform: uppercase;
+                    margin: 0 0 10px 0;
+                }
+
+            }
+        }
+    }
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    padding: 30px 0;
+
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+
+            // nadanie dwóm obrazkom tej samej wysokości
+            img {
+                max-height: 30px;
+            }
+
+            .logo-white {
+                display: none;
+
+            }
+        }
+
+        .menu {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            @media(max-width:1000px) {
+                display: none;
+            }
+
+            li {
+                text-decoration: none;
+                margin: 0 35px 0 0;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                a {
+                    color: $navigationMainColor;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+
+                    display: block;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: $navigationMainColorHover;
+                    }
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+            width: 30px;
+            height: 20px;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            position: relative;
+
+            @media(max-width: 1000px) {
+                display: block;
+
+            }
+
+            &.active {
+                span {
+                    &:nth-last-of-type(2) {
+                        display: none;
+                    }
+
+                    &:nth-last-of-type(1) {
+                        top: 11px;
+                        transform: rotate(45deg);
+                    }
+
+                    &:nth-last-of-type(3) {
+                        bottom: 7px;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            span {
+                display: block;
+                width: 100%;
+                background-color: $hamburgerBgColor;
+                height: 2px;
+                position: absolute;
+
+                &:nth-last-of-type(1) {
+                    top: 0;
+                    left: 0;
+                }
+
+                &:nth-of-type(2) {
+                    top: 50%;
+                    left: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                }
+
+                &:nth-last-of-type(3) {
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+
+
+    }
+
+    @media(max-width: 1000px) {
+
+        transition: 0.8s;
+        background-color: $navigationMoveBgColor;
+
+        .container {
+            .logo {
+                .logo-black {
+                    display: none;
+                }
+
+                .logo-white {
+                    display: block;
+                }
+            }
+
+            .menu {
+
+                li {
+                    a {
+                        color: $navigationMoveATextColor;
+
+                        &:hover {
+                            color: $navigationMoveHoverATextColor;
+                        }
+                    }
+                }
+            }
+
+            .hamburger {
+                display: none;
+                width: 30px;
+                height: 20px;
+                border: none;
+                background-color: transparent;
+                outline: none;
+                position: relative;
+
+                @media(max-width: 1000px) {
+                    display: block;
+
+                }
+
+                &.active {
+                    span {
+                        &:nth-last-of-type(2) {
+                            display: none;
+                        }
+
+                        &:nth-last-of-type(1) {
+                            top: 11px;
+                            transform: rotate(45deg);
+                        }
+
+                        &:nth-last-of-type(3) {
+                            bottom: 7px;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+                span {
+                    display: block;
+                    width: 100%;
+                    background-color: $hamburgerBgColor;
+                    height: 2px;
+                    position: absolute;
+
+                    &:nth-last-of-type(1) {
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &:nth-of-type(2) {
+                        top: 50%;
+                        left: 50%;
+                        transform: translateY(-50%) translateX(-50%);
+                    }
+
+                    &:nth-last-of-type(3) {
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+    // stylowanie po pojawieniu się klasy move po zainicjalizowaniu jej w app.js
+
+    @media(min-width: 1001px) {
+
+
+        &.move {
+            transition: 0.8s;
+            background-color: $navigationMoveBgColor;
+
+            .container {
+                .logo {
+                    .logo-black {
+                        display: none;
+                    }
+
+                    .logo-white {
+                        display: block;
+                    }
+                }
+
+                .menu {
+
+                    li {
+                        a {
+                            color: $navigationMoveATextColor;
+
+                            &:hover {
+                                color: $navigationMoveHoverATextColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
